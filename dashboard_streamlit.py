@@ -9,7 +9,7 @@ from datetime import datetime
 # === 1. Chargement et nettoyage des données ===
 @st.cache_data
 def load_data():
-    path = "data_clean/recettes_fusionnees.csv"
+    path = "recettes_fusionnees.csv"
     df = pd.read_csv(path)
     df.columns = df.columns.str.strip().str.replace(" ", "_").str.lower().str.capitalize()
     col_map = {
